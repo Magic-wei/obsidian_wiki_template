@@ -79,13 +79,19 @@ Even though Obsidian is a great choice for building our wiki system, it actually
 
 ### Local images in HTML format cannot be displayed correctly
 
-We like the syntax `<img src="">` because we can scale images more easily. In Obsidian, `<img src="">` cannot be used to display local images. But it can still be used for online image. See the examples below.
+We like the syntax `<img src="">` because we can scale images more easily. In Obsidian, `<img src="">` cannot be used to display local images. But it can still be used for online image (images in Github repo failed) . See the examples below.
 
 ```markdown
-<img src="https://github.com/Magic-wei/obsidian_wiki_template/blob/main/asserts/example_image.svg" width="50%" alt="example_image from website">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png" width="50%" alt="example image from Wikipedia">
 ```
 
-<img src="https://github.com/Magic-wei/obsidian_wiki_template/blob/main/asserts/example_image.svg" width="50%" alt="example_image from website">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png" width="50%" alt="example image from Wikipedia">
+
+```markdown
+<img src="https://github.com/Magic-wei/obsidian_wiki_template/blob/main/asserts/example_image.svg" width="50%" alt="example_image from Github repo">
+```
+
+<img src="https://github.com/Magic-wei/obsidian_wiki_template/blob/main/asserts/example_image.svg" width="50%" alt="example_image from Github repo">
 
 ```markdown
 <img src="./asserts/example_image.svg" width="50%" alt="example_image from local file">
