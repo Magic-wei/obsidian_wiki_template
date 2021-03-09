@@ -3,9 +3,11 @@ Welcome to Obsidian Wiki Template!
 
 This is a personal wiki or note-taking system template based on [Obsidian](https://obsidian.md/) which works on top of a local folder of plain text Markdown files. Obsidian is a really powerful software that helps manage our notes and build the connections between them. There are a bunch of settings we need to do before we can actually get the best experience in Obsidian. However, with this template, you don't need to start your Obsidian-based wiki system from scratch.
 
-## Quick Start
-
 (If you are reading this README file in Obsidian, use `Ctrl + E` to toggle edit/preview mode)
+
+![obsidian_window](asserts/obsidian_window.png)
+
+## Quick Start
 
 Obsidian will store your notes in a **vault** which is actually the base folder of the wiki system. Besides your notes, there are also all of its settings files, CSS, trash folder, and any sub-folders and attachments.
 
