@@ -27,12 +27,6 @@ a&0&0\\\
 0&0&1\\\
 \end{matrix}$$
 
-## Youtube iframe
-
-<center>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/Ewhfok91AdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-
 ## Tags
 
 Tags can be used to sort notes. Click to search tags in all files:
@@ -50,6 +44,14 @@ See preview by hovering on the link:
 - Unexisted files can also be linked to, click to create the file: [Unexisted](Unexisted.md)
 
 The number of backlinks is displayed at the bottom-right of the Obsidian window. Click on it to see which notes have links to the current note.
+
+
+## Youtube iframe
+
+<center>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Ewhfok91AdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
 
 ## TODO
 The plugin `checklist` can help us collect todo items across pages into the sidebar.
