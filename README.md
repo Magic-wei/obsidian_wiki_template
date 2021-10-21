@@ -113,6 +113,19 @@ Solution is, we use table to help us arrange images. There is a template file na
 |-----|-----|
 |![[example_image.svg]]|![example_image.svg](./asserts/example_image.svg)|
 
+### A LaTeX field with `*` in it cannot be rendered properly if there is a star symbol `*` before it
+
+If we use star symbol `*` in a LaTeX field like $C^*$, in the same paragraph there should not be any `*` symbol before it (it's okay to use star `*` in a code field before it), otherwise the LaTeX symbol cannot be rendered properly. See examples below.
+
+| Test Code                                           | Display (See this part in Obsidian)               |
+| --------------------------------------------------- | ------------------------------------------------- |
+| `A* search can find the optimal cost $C^*$.`        | A* search can find the optimal cost $C^*$.        |
+| `A-star search can find the optimal cost $C^*$.`    | A-star search can find the optimal cost $C^*$.    |
+| `The optimal cost $C^*$ can be found by A* search.` | The optimal cost $C^*$ can be found by A* search. |
+| `*` `$C^*$ A* $C_1^*$ $C_2^*$`                      | `*` $C^*$ A* $C_1^*$ $C_2^*$                      |
+
+![image-20211021182228211](asserts/star_symbol_issue_with_latex.png)
+
 ### Safe mode is on every time we clone and open the vault for the first time
 
 Safe mode will be initialized to `ON` every time we clone and open the vault for the first time on a new PC, which will prevent us from using community plugins.
