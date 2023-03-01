@@ -15,15 +15,19 @@ helpFunc(){
 }
 
 backup(){
-    cp "${CONFIG_DIR}/config" "${CONFIG_DIR}/config.backup"
-    cp "${CONFIG_DIR}/workspace" "${CONFIG_DIR}/workspace.backup"
+    for entry in $(ls ${CONFIG_DIR}); do
+        if (test -f ${CONFIG_DIR}/${entry}) ; then
+            cp "${CONFIG_DIR}/${entry}" "${CONFIG_DIR}/${entry}.bak"
+        fi
+    done
 }
 
 restore(){
-    cp "${CONFIG_DIR}/config.backup" "${CONFIG_DIR}/config"
-    cp "${CONFIG_DIR}/workspace.backup" "${CONFIG_DIR}/workspace"
-    rm "${CONFIG_DIR}/config.backup"
-    rm "${CONFIG_DIR}/workspace.backup"
+    for entry in $(ls ${CONFIG_DIR}); do
+        if (test -f ${CONFIG_DIR}/${entry}.bak) ; then
+            mv "${CONFIG_DIR}/${entry}.bak" "${CONFIG_DIR}/${entry}"
+        fi
+    done
 }
 
 setup() {

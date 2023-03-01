@@ -29,34 +29,40 @@ Remember, Obsidian is just a software tool that can be used in many ways, from a
 
 ## Settings
 
-Besides our notes, all settings are stored under the folder `.obsidian` including built-in plugin settings, downloaded community plugins, workspace layouts, hotkeys, etc. Let's take a look at what's inside this folder:
+Besides our notes, all settings are stored under the folder `.obsidian` including built-in plugin settings, downloaded community plugins, workspace layouts, hotkeys, etc. Note that Obsidian has split `config` into multiple JSON files since v1.0. Let's take a look at what's inside this folder:
 
 - `plugins/` is the folder contains downloaded community plugins.
-- `config` stores most setting parameters like whether or not enable a plugin, hotkeys, and some other parameters.
-- `workspace` stores our workspace layouts. You can treat it as the layout of the home page you would like to see when you open your vault in Obsidian. This file will be updated most frequently even you just open a new file and close Obsidian.
+- `workspace.json` maintains the latest workspace layout. You can treat it as the layout of the home page you would like to see when you open your vault in Obsidian. This file will be updated most frequently even you just open a new file and close Obsidian.
+- `core-plugins-migration.json` stores the activation status of the built-in core plugins.
+- `core-plugins.json` stores a list of activated core plugins in your vault (which are set `true` in `core-plugins-migration.json`).
+- `community-plugins.json` stores a list of installed community plugins in your vault.
+- `hotkeys.json` stores your custom hotkey configurations.
+- Other settings, including settings for some activated core plugins, can be found at `app.json`, `appearance.json`, etc.
 
-**Obsidian will update these files in sync, so if you don't want to frequently commit changes on these settings, you should update these files manually.** It is highly recommended to put the file `workspace` (and perhaps `config` as well) into `.gitignore` once you commit your favourite layout.
+**Obsidian will update these files in sync, so if you don't want to frequently commit changes on these settings, you should update these files manually.** It is highly recommended to put the file `workspace.json` (and perhaps other config files as well) into `.gitignore` once you commit your favourite layout.
 
 ## Useful Hotkeys
 
 Some useful hotkeys used in this template (customized means this is my personal setting):
 
-| Hotkey names                                                 | Hotkey settings         |
-| ------------------------------------------------------------ | ----------------------- |
-| Insert template                                              | `ctrl + T`              |
-| Search current file                                          | `Ctrl + F`              |
-| Search in all files                                          | `Ctrl + Shift + F`      |
-| Focus on pane to the left                                    | `Alt + <-` (customized) |
-| Focus on pane to the right                                   | `Alt + ->` (customized) |
-| Open command palette                                         | `Ctrl + P`              |
-| Toggle edit/preview mode                                     | `Ctrl + E`              |
-| Close active pane                                            | `Ctrl + W`              |
-| Emoji Toolbar: Open emoji picker                             | `Ctrl + [` (customized) |
-| Wikilinks to MDLinks: Toggle selected wikilink to markdown link and vice versa | `Ctrl + Shift + L`      |
-| Toggle bold for selection                                    | `Ctrl + B`              |
+| Hotkey names                                                 | Hotkey settings                      |
+| ------------------------------------------------------------ | ------------------------------------ |
+| Insert template                                              | `ctrl + T` (override New tab hotkey) |
+| Search current file                                          | `Ctrl + F`                           |
+| Search in all files                                          | `Ctrl + Shift + F`                   |
+| Jump to file                                                 | `Ctrl + O`                           |
+| Focus on pane to the left (only works for left-right split panes) | `Alt + <-` (customized)              |
+| Focus on pane to the right (not working for left-right split panes) | `Alt + ->` (customized)              |
+| Open command palette                                         | `Ctrl + P`                           |
+| Toggle edit/preview mode                                     | `Ctrl + E`                           |
+| Close active pane                                            | `Ctrl + W`                           |
+| Emoji Toolbar: Open emoji picker                             | `Ctrl + [` (customized)              |
+| Wikilinks to MDLinks: Toggle selected wikilink to markdown link and vice versa | `Ctrl + Shift + L`                   |
+| Toggle bold for selection                                    | `Ctrl + B`                           |
 
 - Opening a note with `Ctrl` key will open it in a new pane.
-- `Shift + Scroll wheel` to scroll between all opened notes when community plugin `Sliding Panes` is enabled.
+- `Shift + Scroll wheel` to scroll between all opened notes (only works in the pane with stacked tabs).
+- Note that the hotkeys `Focus on Pane to the left/right` only works for left-right split panes. New built-in feature `Stack Tabs` just stack tabs in the same pane and thus these hotkeys doesn't work for them.
 
 
 ## Useful Plugins
@@ -68,11 +74,12 @@ This template uses the following built-in core plugins and community plugins:
   - Daily notes (create or open today's daily note with only one click)
   - Slides (make fast presentation)
   - Graph view (explore connections between notes)
+  - Quick switcher (use `Ctrl/Cmd + O` to jump to other files quickly)
+  - Canvas (arrange and connect notes on an infinite canvas and save to `.canvas` files)
 - Community plugins
   - Checklist (combines checklists across pages into user's sidebar)
   - Copy button for code blocks
   - Emoji Toolbar (find and input emoji quickly)
-  - Sliding Panes (explore multiple notes fast and smoothly)
   - Wikilinks to MDLinks (very useful if you want to switch links between `[[link]]` and `[link](./path/to/file)`)
 
 ## Solutions to Known Issues in Obsidian
@@ -132,17 +139,17 @@ Safe mode will be initialized to `ON` every time we clone and open the vault for
 
 Solution is:
 
-1. Back up `.obsidian/config` and `.obsidian/workspace` before we clone and open the vault for the first time. 
-2. Open the vault and turn off safe mode. 
-3. Restore these two files with backup. Everything will be exactly what it was.
+1. Back up `.obsidian/*.json` before we clone and open the vault for the first time. 
+2. Open the vault and click `Trust author and enable plugins`. 
+3. Restore these JSON files with backup. Everything will be exactly what it was, except for the window's location and size which are stored at a different path for the latest version, but this is okay since you will resize it on the new machine anyway.
 
-Feel free to use the script `setup.sh` to help backup or restore on Linux.
+Feel free to use the script `setup.sh` to help backup or restore on Linux (or on Windows with something like Git Bash that supports Shell scripts).
 
 ```bash
 # Step 1: Back up (Run the script in the root directory of this repo)
 ./setup.sh backup
 
-# Step 2: Open the vault and turn safe mode off.
+# Step 2: Open the vault and click `Trust author and enable plugins`.
 
 # Step 3: Restore
 ./setup.sh restore
