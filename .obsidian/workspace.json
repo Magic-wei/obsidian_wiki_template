@@ -101,14 +101,15 @@
             }
           },
           {
-            "id": "47c8711556150b46",
+            "id": "c76c73fdf3f82981",
             "type": "leaf",
             "state": {
-              "type": "starred",
+              "type": "bookmarks",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -204,12 +205,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e539e5ba516a9269",
+  "active": "4b2ffb60ed25b15e",
   "lastOpenFiles": [
+    "README.md",
     "Examples.md",
     "Templates/Two-Column Images.md",
     "Templates/Slide.md",
-    "README.md",
     "Daily/Create Daily Note Here.md",
     "Templates/Note.md",
     "Templates/Daily.md",

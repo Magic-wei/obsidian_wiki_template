@@ -22,9 +22,9 @@ Inline: $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$, $x=s_x + x_1$
 
 Matrix:
 $$\begin{matrix}
-a&0&0\\\
-0&1&0\\\
-0&0&1\\\
+a & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
 \end{matrix}$$
 
 ## Tags

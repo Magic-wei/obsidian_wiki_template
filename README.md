@@ -45,20 +45,22 @@ Besides our notes, all settings are stored under the folder `.obsidian` includin
 
 Some useful hotkeys used in this template (customized means this is my personal setting):
 
-| Hotkey names                                                 | Hotkey settings                      |
-| ------------------------------------------------------------ | ------------------------------------ |
-| Insert template                                              | `ctrl + T` (override New tab hotkey) |
-| Search current file                                          | `Ctrl + F`                           |
-| Search in all files                                          | `Ctrl + Shift + F`                   |
-| Jump to file                                                 | `Ctrl + O`                           |
-| Focus on pane to the left (only works for left-right split panes) | `Alt + <-` (customized)              |
-| Focus on pane to the right (not working for left-right split panes) | `Alt + ->` (customized)              |
-| Open command palette                                         | `Ctrl + P`                           |
-| Toggle edit/preview mode                                     | `Ctrl + E`                           |
-| Close active pane                                            | `Ctrl + W`                           |
-| Emoji Toolbar: Open emoji picker                             | `Ctrl + [` (customized)              |
-| Wikilinks to MDLinks: Toggle selected wikilink to markdown link and vice versa | `Ctrl + Shift + L`                   |
-| Toggle bold for selection                                    | `Ctrl + B`                           |
+| Hotkey names                                                 | Hotkey settings                          |
+| ------------------------------------------------------------ | ---------------------------------------- |
+| Insert template                                              | `ctrl + T` (override New tab hotkey)     |
+| Search current file                                          | `Ctrl + F`                               |
+| Search in all files                                          | `Ctrl + Shift + F`                       |
+| Jump to file                                                 | `Ctrl + O`                               |
+| Go to next tab (in the same tab group)                       | `Ctrl + Tab` or `Ctrl + Page Down`       |
+| Go the previous tab (in the same tab group)                  | `Ctrl + Shift + Tab` or `Ctrl + Page Up` |
+| Focus on tab group to the left (only works for left-right split) | `Alt + <-` (customized)                  |
+| Focus on tab group to the right (only works for left-right split) | `Alt + ->` (customized)                  |
+| Open command palette                                         | `Ctrl + P`                               |
+| Toggle edit/preview mode                                     | `Ctrl + E`                               |
+| Close active pane                                            | `Ctrl + W`                               |
+| Emoji Toolbar: Open emoji picker                             | `Ctrl + [` (customized)                  |
+| Wikilinks to MDLinks: Toggle selected wikilink to markdown link and vice versa | `Ctrl + Shift + L`                       |
+| Toggle bold for selection                                    | `Ctrl + B`                               |
 
 - Opening a note with `Ctrl` key will open it in a new pane.
 - `Shift + Scroll wheel` to scroll between all opened notes (only works in the pane with stacked tabs).
